@@ -1,11 +1,9 @@
 import express from "express";
+import routes from "./routes/index.js";
 
 const port = 3000;
 const app = express();
 
-
-app.get("/", (req,res) => {
-    res.status(200).send("Salve!");
-})
+routes(app);
 
 app.listen(port, () => console.log(`Ouvindo a porta ${port}`));
